@@ -4,7 +4,7 @@
 	
 	<groupId>au.edu.jcu</groupId>
 	<artifactId>v4l4j</artifactId>
-	<version>0.9.1-WC</version>
+	<version>0.9-WC</version>
 	
 	<name>V4L4J</name>
 
