@@ -8,7 +8,6 @@ rm -rf src/main/java/au
 
 cp $TRUNK/COPYING .
 cp $TRUNK/CREDITS .
-cp $TRUNK/README .
 cp -r $TRUNK/src/au src/main/java
 
 rm -rf src/main/java/au/edu/jcu/v4l4j/examples
