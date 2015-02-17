@@ -247,31 +247,13 @@ public interface FrameGrabber {
 	/**
 	 * This method starts the capture. Frames will
 	 * be delivered to the provided {@link CaptureCallback} object.
-	 * @throws V4L4JException if the capture cannot be started
+	 * @throws V4L4JException if no valid {@link CaptureCallback} object was 
+	 * provided (call {@link #setCaptureCallback(CaptureCallback callback)}
+	 * OR if the capture cannot be started
 	 * @throws StateException if this <code>FrameGrabber</code> has been already
 	 * released, and therefore must not be used anymore
 	 */
 	public void startCapture() throws V4L4JException;
-
-	/**
-	 * This is a legacy method, it will be removed. Do not use it.<br>
-	 * This method blocks and waits for a frame, then returns it. If you call 
-	 * this method, make sure either {@link #startCapture()} has already been
-	 * called, or another thread will call it in the near future, as 
-	 * {@link #getVideoFrame()} will block if capture is not started.
-	 * @return an {@link VideoFrame} containing the captured frame data.
-	 * @throws V4L4JException if there is an error capturing from the source.
-	 * @throws StateException if either the capture has not been started, if this 
-	 * <code>FrameGrabber</code> has been already released, and therefore must 
-	 * not be used anymore or if we were interrupted while waiting for a frame
-	 * to be recycled.
-	 * @deprecated This method has been deprecated and will be removed in a 
-	 * future release. Instead of using this method, you should use this frame
-	 * grabber in push mode. See @link {@link FrameGrabber} for more information
-	 * on how to enable push mode.
-
-	 */
-	public VideoFrame getVideoFrame() throws V4L4JException;
 
 	/**
 	 * This method stops the capture, and recycles all @link {@link VideoFrame}s.

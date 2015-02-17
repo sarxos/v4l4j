@@ -2,9 +2,9 @@
     
 	<modelVersion>4.0.0</modelVersion>
 	
-	<groupId>au.edu.jcu</groupId>
+	<groupId>com.github.sarxos</groupId>
 	<artifactId>v4l4j</artifactId>
-	<version>0.9.1-WC</version>
+	<version>0.9.1-r507</version>
 	
 	<name>V4L4J</name>
 

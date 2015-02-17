@@ -75,7 +75,7 @@ public class JPEGFrameGrabber extends AbstractGrabber {
 	JPEGFrameGrabber(DeviceInfo di,long o, int w, int h, int ch, int std, int q
 			, Tuner t,ImageFormat imf, ThreadFactory factory) throws V4L4JException{
 		super(di, o,w,h,ch,std, t , imf, JPEG_GRABBER, factory);	
-		setJPGQuality(q);
+		quality = q;
 	}
 	
 	/**
@@ -103,7 +103,7 @@ public class JPEGFrameGrabber extends AbstractGrabber {
 	void init() throws V4L4JException{
 		try {
 			super.init();
-			setQuality(object, quality);
+			setJPGQuality(quality);
 		} catch (ImageFormatException ife){
 			if(format == -1){
 				String msg ="v4l4j was unable to find image format supported by"
