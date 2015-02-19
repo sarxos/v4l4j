@@ -11,12 +11,7 @@ Source revision [r507](http://code.google.com/p/v4l4j/source/detail?r=507).
 
 ## Maven
 
-```xml
-<repository>
-    <id>SarXos Repository</id>
-    <url>http://www.sarxos.pl/repo/maven2</url>
-</repository>
-```
+The artifact is available in Maven Central:
 
 ```xml
 <dependency>
